@@ -1,0 +1,43 @@
+# ================================
+# CommandCooldown Messages Config
+# ================================
+# Поддерживаются цветовые коды (&)
+# Используйте {prefix} для вставки префикса
+# Используйте {player}, {command}, {time} для замены значений
+
+prefix: "&8[&6CommandCooldown&8] &f"
+
+cooldown:
+  active: "{prefix}&cПожалуйста, подождите &e{time} &cдля использования этой команды."
+
+command:
+  no-permission: "{prefix}&cУ вас нет прав для использования этой команды."
+  usage:
+    main: "{prefix}&7Использование: &e/commandcooldown <set|remove|clear> [ник] [команда] [секунды]"
+    set: "{prefix}&7Использование: &e/commandcooldown set <ник> <команда> <секунды>"
+    remove: "{prefix}&7Использование: &e/commandcooldown remove <ник> <команда>"
+    clear: "{prefix}&7Использование: &e/commandcooldown clear <ник>"
+  unknown-subcommand: "{prefix}&cНеизвестная подкоманда. Используйте: &fset, remove, clear"
+  player-not-found: "{prefix}&cИгрок &f{player} &cне найден или не в сети."
+  invalid-number: "{prefix}&cКулдаун должен быть числом."
+  negative-number: "{prefix}&cКулдаун не может быть отрицательным числом."
+  set-success: "{prefix}&aКулдаун для команды &e{command} &aустановлен для игрока &e{player} &aна &e{time}&a."
+  remove-success: "{prefix}&aКулдаун для команды &e{command} &aудален для игрока &e{player}&a."
+  clear-success: "{prefix}&aВсе кулдауны для игрока &e{player} &aочищены."
+
+database:
+  connected: "Успешное подключение к {type}!"
+  connection-lost: "Соединение с базой данных потеряно. Пытаюсь переподключиться..."
+  connection-error: "Ошибка подключения к базе данных: {error}"
+  connection-closed: "Соединение с базой данных закрыто"
+  close-error: "Ошибка закрытия соединения: {error}"
+  table-create-error: "Ошибка создания таблицы: {error}"
+  query-error: "Ошибка выполнения запроса: {error}"
+
+time:
+  format:
+    days: " д. "
+    hours: " ч. "
+    minutes: " мин. "
+    seconds: " сек."
+  zero: "0 сек."

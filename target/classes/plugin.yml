@@ -1,0 +1,21 @@
+name: CommandCooldown
+version: '1.0'
+main: org.nezxenka.commandcooldown.CommandCooldown
+api-version: '1.16'
+author: nezxenka
+softdepend: [PlaceholderAPI]
+
+commands:
+  commandcooldown:
+    description: Управление кулдаунами команд
+    usage: /commandcooldown <set|remove|clear> [ник] [команда] [секунды]
+    aliases: [cmdcd, ccd]
+    permission: commandcooldown.admin
+
+permissions:
+  commandcooldown.admin:
+    description: Доступ к управлению кулдаунами
+    default: op
+  commandcooldown.bypass:
+    description: Обход кулдаунов команд
+    default: op
